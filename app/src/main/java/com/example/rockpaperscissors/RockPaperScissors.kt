@@ -16,6 +16,7 @@ fun main()
     {
         println("Please enter a valid input");
         playerChoice = readln();
+        playerChoice = playerChoice.lowercase();
     }
 
     val randomNumber = (1..3).random();
@@ -39,9 +40,9 @@ fun main()
     //determine the winner
     val winner = when{
         playerChoice == computerChoice -> "Tie";
-        playerChoice == "Rock" && computerChoice == "Scissors" -> "Player";
-        playerChoice == "Paper" && computerChoice == "Rock" -> "Player";
-        playerChoice == "Scissors" && computerChoice == "Paper" -> "Player";
+        playerChoice == "rock" && computerChoice == "Scissors" -> "Player";
+        playerChoice == "paper" && computerChoice == "Rock" -> "Player";
+        playerChoice == "scissors" && computerChoice == "Paper" -> "Player";
         else -> "Computer";
     }
 
