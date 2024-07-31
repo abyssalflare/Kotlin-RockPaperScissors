@@ -34,4 +34,41 @@ fun main()
         playerChoice == "Scissors" && computerChoice == "Paper" -> "Player";
         else -> "Computer";
     }
+
+    //print out who the winner was
+
+    //using if else
+
+    /*
+    if(winner == "Tie")
+    {
+        println("It was a tie.");
+    }
+    else if(winner == "Player")
+    {
+        println(winner + "wins");
+    }
+    else
+    {
+        println(winner + "wins");
+    }
+    */
+
+    //print out who the winner was
+
+    //using when
+    /*
+    when{
+        winner == "Tie" -> println("It was a tie.");
+        winner == "Player" -> println(winner + "wins");
+        else -> println(winner + "wins");
+    }
+    */
+    
+    //using a template to replace string concatenation
+    when{
+        winner == "Tie" -> println("It was a tie.");
+        winner == "Player" -> println("$winner wins");
+        else -> println("$winner wins");
+    }
 }
