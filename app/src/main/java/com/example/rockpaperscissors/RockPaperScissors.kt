@@ -6,7 +6,17 @@ fun main()
     var playerChoice = "";
 
     println("Rock, Paper or Scissors? Please enter your choice")
+
     playerChoice = readln();
+
+    //game should not be case sensitive so, convert all possible inputs to lower case
+    playerChoice = playerChoice.lowercase();
+
+    while(playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors")
+    {
+        println("Please enter a valid input");
+        playerChoice = readln();
+    }
 
     val randomNumber = (1..3).random();
 
